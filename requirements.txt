@@ -1,0 +1,17 @@
+# Core LangChain framework for RAG pipeline and memory management
+langchain>=0.2.0
+
+# Community integrations for Ollama, HuggingFace Embeddings, and FAISS
+langchain-community>=0.0.35
+
+# Vector Store (FAISS) for storing and retrieving document embeddings
+faiss-cpu>=1.7.4
+
+# PDF Loader (PyMuPDF) for efficient document text extraction
+pypdf>=4.2.0
+
+# HuggingFace (Sentence Transformers) for the local embedding model (all-MiniLM-L6-v2)
+sentence-transformers>=2.7.0
+
+# UI Framework for the Chatbot Interface
+gradio>=4.31.5
