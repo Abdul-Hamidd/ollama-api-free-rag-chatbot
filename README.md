@@ -8,31 +8,9 @@ A production-ready, highly cost-effective **Retrieval-Augmented Generation (RAG)
 
 The pipeline implements an offline-first data ingestion and retrieval workflow, isolating document splitting, vector serialization, and generation layers:
 
-[ Private PDF Document ]
-│
-▼ (LangChain PyPDFLoader)
-[ Document Ingestion & Chunking ] ➔ (RecursiveCharacterTextSplitter)
-│
-▼ (HuggingFace Transformers)
-[ Vectorization Engine ] ➔ (Local Embeddings: all-MiniLM-L6-v2 via CPU)
-│
-▼ (FAISS Indexing Serialization)
-[ Persistent Local Vector Store ] ➔ (Saved as: faiss_index_local_rag/)
-│
-┌─────┴────────────────────────┐
-▼ (Similarity Search Ingestion)▼ (User Interaction Layer)
-[ Context-Aware Retrieval ]      [ Modern Gradio Chat UI ]
-│                                     │
-└─────────────┬───────────────────────┘
-│ (Augmented Prompt Construction)
-▼
-[ Local Ollama LLM Runtime Engine ] ➔ (Model: Llama3 / Mistral)
-│
-▼ (Streaming Context Output)
-[ Token Dispatched to User Interface ]
-
-
----
+<p align="center">
+  <img src="https://github.com/Abdul-Hamidd/ollama-api-free-rag-chatbot/raw/main/RAG%20Architecture%20Diagram.png" alt="RAG Chatbot Visual Workflow Diagram" width="850">
+</p>
 
 ## 🚀 Core Technical Features
 
